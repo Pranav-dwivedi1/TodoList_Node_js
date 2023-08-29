@@ -1,0 +1,22 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+
+<form action="/updateUser/<%=user._id%>" method="post" class="m-auto w-25 mt-5">
+
+
+<!-- //required maxlength minlength -->
+    <!-- <form class="m-auto w-25 mt-5"></form> -->
+    <h1 class="mb-4">Update</h1>
+
+    <input class="form-control mb-3" type="text" placeholder="johndoe" name="username" value="<%=user.username%>">
+
+    <input class="form-control mb-3" type="email" placeholder="johndoe@gmail.com" name="email" value="<%=user.email%>">
+
+    <input class="form-control mb-3" type="password" placeholder="*******" name="password"  disabled>
+
+    <button class="btn btn-primary w-25">Update</button>
+
+    <p>Already have an account? <a href="/sign-in">SignIn</a></p>
+
+</form>
+<%- include("partials/footer")%>

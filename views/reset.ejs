@@ -1,0 +1,19 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+
+<form action="/reset/<%=id%>" method="post" class="m-auto w-25 mt-5">
+
+
+<!-- //required maxlength minlength -->
+    <!-- <form class="m-auto w-25 mt-5"></form> -->
+    <h1 class="mb-4">Reset Password</h1>
+
+
+<input class="form-control mb-3" type="password" placeholder="Old Password" name="oldpassword">
+
+<input class="form-control mb-3" type="password" name="password" placeholder="New Password">
+
+    <button class="btn btn-primary">Reset Password</button>
+
+</form>
+<%- include("partials/footer")%>

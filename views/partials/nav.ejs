@@ -1,0 +1,19 @@
+<nav class="d-flex w-100 p-3 container justify-content-between shadow ">
+    <h1>Logo</h1>
+    <ul class="d-flex gap-5 list-unstyled">
+        <!-- <li><a class="text-decoration-none fw-bolder text-primary-emphasis" href="/">Home</a></li> -->
+
+        <li><a class="text-decoration-none fw-bolder text-primary-emphasis" href="<%=user?'/home' : '/'%>">Home</a></li>
+
+        <% if(!user) {%>
+        <li><a class="text-decoration-none fw-bolder text-primary-emphasis" href="/sign-in">SignIn</a> </li>
+        <li><a class="text-decoration-none fw-bolder text-primary-emphasis" href="/sign-up">SignUp</a> </li>
+
+        <% } else{%>
+
+            <li><a class="text-decoration-none" href="/profile">Profile</a></li>
+            <li><a class="text-decoration-none fw-bolder text-primary-emphasis" href="/signout">SignOut</a></li>
+
+        <%}%>
+    </ul>
+</nav>
